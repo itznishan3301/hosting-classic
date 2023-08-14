@@ -10,9 +10,21 @@
     <!-- Favicon Added Here -->
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
 
-    <!-- Tailwind and DaisyUI Added Here -->
+    <!-- Tailwind and DaisyUI Linked -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font-Awesome Linked -->
+    <script src="https://kit.fontawesome.com/22d6e883bc.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts Linked -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800&family=Lato:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
 
     <!-- Custom class for Tailwind -->
     <script>
@@ -21,6 +33,8 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'color-main': '#02073E',
+                        'btn-color': '#3CC68A'
                     }
                 }
             }
@@ -29,15 +43,127 @@
 
     <!-- Custom Style Added -->
     <style>
-
+        .font-dm {
+            font-family: 'DM Sans', sans-serif;
+            font-family: 'Lato', sans-serif;
+        }
     </style>
-    
+
 </head>
 
-<body>
+<body class="font-dm">
 
-    <header>
+    <header class="container mx-auto">
+        <nav class="mt-6 items-center">
+            <div class="navbar bg-base-100">
 
+
+                <!-- Logo Section -->
+
+                <div class="navbar-start ml-14">
+                    <img src="./images/logo.png" alt="">
+                    <a class="btn btn-ghost normal-case text-xl">StartupLand</a>
+                </div>
+
+                <!-- Only For Mobile Section -->
+
+                <div class="navbar lg:hidden">
+                    <div class="flex-1">
+                        <a class="btn btn-ghost normal-case text-xl hidden lg:block">Fuirt Brust</a>
+                    </div>
+                    <div class="dropdown dropdown-left">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="inline-block w-5 h-5 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16">
+                                </path>
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+
+                            <form class="order-first mb-10" action="">
+                                <input class="w-44 py-1 pl-3 pr-10 rounded-full focus:outline-0" type="text"
+                                    placeholder="Search here" name="search">
+                                <button class="-ml-8 border-6 bg-trasparent" type="submit"><i
+                                        class="fa fa-search text-gray-400"></i></button>
+                            </form>
+
+                            <li><a>Home</a></li>
+                            <li><a>Advertise</a></li>
+                            <li><a>Support</a></li>
+                            <li><a>About</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Menu Section -->
+
+                <div class="navbar-center mr-72 hidden lg:flex">
+                    <div>
+                        <ul class="flex gap-8 text-color-main font-bold">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Advertise</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost btn-circle">
+                            <button class="btn btn-ghost btn-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                        </label>
+                        <div tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <form class="order-first mb-10 md:mb-0 md:order-last md:pr-8" action="">
+                                <input class="w-72 py-1 pl-3 pr-10 rounded-full focus:outline-0" type="text"
+                                    placeholder="Search here" name="search">
+                                <button class="-ml-8 border-6 bg-trasparent" type="submit"><i
+                                        class="fa fa-search text-gray-400"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Nav-Button Section -->
+
+                <div class="navbar-end mr-20 hidden lg:flex">
+
+                    <div class="flex gap-5">
+                        <button class="flex btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"
+                                fill="none">
+                                <g opacity="0.5">
+                                    <path
+                                        d="M18.1562 20.2717V12.0984C18.1562 10.6229 16.9525 9.4192 15.4771 9.4192H14.8026V5.64871C14.8026 2.53396 12.2687 0 9.15391 0C6.03915 0 3.50988 2.53864 3.50988 5.64871V6.29977C3.50988 6.74473 3.87054 7.1007 4.31082 7.1007C4.7511 7.1007 5.11644 6.74005 5.11644 6.29977V5.64871C5.11644 3.4192 6.92908 1.60656 9.15859 1.60656C11.3881 1.60656 13.2007 3.4192 13.2007 5.64871V9.4192H2.83541C1.36 9.4192 0.15625 10.6183 0.15625 12.0984V20.2717C0.15625 21.7471 1.36 22.9508 2.83541 22.9508H15.4818C16.9572 22.9461 18.1562 21.7471 18.1562 20.2717ZM1.76749 20.2717V12.0984C1.76749 11.5082 2.24993 11.0258 2.84009 11.0258H15.4818C16.0719 11.0258 16.5544 11.5082 16.5544 12.0984V20.2717C16.5544 20.8618 16.0719 21.3443 15.4818 21.3443H2.83541C2.24524 21.3396 1.76749 20.8618 1.76749 20.2717Z"
+                                        fill="black" />
+                                    <path
+                                        d="M9.15535 14.3887C8.71039 14.3887 8.34973 14.7493 8.34973 15.1896V17.2645C8.34973 17.7095 8.71039 18.0655 9.15535 18.0655C9.60032 18.0655 9.95629 17.7048 9.95629 17.2645V15.1896C9.95629 14.7493 9.60032 14.3887 9.15535 14.3887Z"
+                                        fill="black" />
+                                </g>
+                            </svg>
+
+                            <a class="normal-case font-bold" href="">Login</a>
+
+                        </button>
+
+
+                        <div>
+                            <button class="btn btn-ghost bg-btn-color normal-case whitespace-nowrap font-bold">Join
+                                Community</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
